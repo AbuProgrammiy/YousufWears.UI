@@ -8,6 +8,23 @@ import { GenderSelectionComponent } from './components/secondary/gender-selectio
 import { HomeComponent } from './components/primary/home/home.component';
 import { NavbarComponent } from './components/primary/navbar/navbar.component';
 
+// PrimeNG providers
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { providePrimeNG } from 'primeng/config';
+import Aura from '@primeng/themes/aura';
+
+import { Dock } from 'primeng/dock';
+
+
+// PrimeNG modules
+import { ButtonModule } from 'primeng/button';
+import { DockModule } from 'primeng/dock';
+
+import { RadioButton } from 'primeng/radiobutton';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { TooltipModule } from 'primeng/tooltip';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,9 +35,23 @@ import { NavbarComponent } from './components/primary/navbar/navbar.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ButtonModule,
+    DockModule,
+    RadioButton,
+    CommonModule,
+    FormsModule,
+    TooltipModule,
+    Dock
   ],
-  providers: [],
+  providers: [
+    provideAnimationsAsync(),
+    providePrimeNG({
+      theme: {
+        preset: Aura
+      }
+    }),
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
