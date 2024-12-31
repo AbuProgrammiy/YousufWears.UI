@@ -1,0 +1,23 @@
+.main{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+.male-gender{
+    width: 50%;
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+.female-gender{
+    width: 50%;
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: pink;
+}
