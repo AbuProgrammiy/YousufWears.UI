@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'gender-selection',
@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrl: './gender-selection.component.scss'
 })
 export class GenderSelectionComponent {
+  @Output() selectGender = new EventEmitter()
 
+  genderSelection(gender: string) {
+    localStorage.setItem("gender", gender)
+    this.selectGender.emit(gender)
+  }
 }

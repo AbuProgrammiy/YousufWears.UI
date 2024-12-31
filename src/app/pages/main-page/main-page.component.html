@@ -1,11 +1,8 @@
 <div class="main">
-    @if(gender==Genders.male){
-
-    }
-    @else if(gender==Genders.female){
-
+    @if(gender=="male" || gender=="female"){
+        <home/>
     }
     @else {
-        <gender-selection/>
+        <gender-selection (selectGender)="selectGender($event)"/>
     }
 </div>

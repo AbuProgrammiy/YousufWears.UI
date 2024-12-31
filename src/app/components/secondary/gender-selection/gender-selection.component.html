@@ -1,8 +1,13 @@
+<div class="content-handler">
+    <div class="logo-background" data-aos="fade-down">
+        <img class="logo" src="../../../../assets/yousuf-wears-logo.png" alt="">
+    </div>
+</div>
 <div class="main">
     <div class="male-gender" data-aos="fade-right">
-        <button class="btn btn-success">Erkaklar kiyimlari</button>
+        <button (click)="genderSelection('male')" class="btn btn-info">Erkaklar kiyimlari</button>
     </div>
     <div class="female-gender" data-aos="fade-left">
-        <button class="btn btn-danger">Ayollar kiyimlari</button>
+        <button (click)="genderSelection('female')" class="btn btn-danger">Ayollar kiyimlari</button>
     </div>
 </div>

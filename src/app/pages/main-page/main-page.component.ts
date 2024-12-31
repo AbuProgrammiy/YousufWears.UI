@@ -12,10 +12,9 @@ export class MainPageComponent {
     }
   }
 
-  Genders = {
-    male: "male",
-    female: "female"
-  }
-
   gender!: string
+
+  selectGender(gender:string){
+    this.gender=gender
+  }
 }
