@@ -12,18 +12,16 @@ import { NavbarComponent } from './components/primary/navbar/navbar.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { providePrimeNG } from 'primeng/config';
 import Aura from '@primeng/themes/aura';
-
-import { Dock } from 'primeng/dock';
-
+import Nora from '@primeng/themes/nora';
 
 // PrimeNG modules
 import { ButtonModule } from 'primeng/button';
-import { DockModule } from 'primeng/dock';
+import { MenubarModule } from 'primeng/menubar';
 
-import { RadioButton } from 'primeng/radiobutton';
+import { BadgeModule } from 'primeng/badge';
+import { AvatarModule } from 'primeng/avatar';
+import { InputTextModule } from 'primeng/inputtext';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-import { TooltipModule } from 'primeng/tooltip';
 
 @NgModule({
   declarations: [
@@ -37,12 +35,11 @@ import { TooltipModule } from 'primeng/tooltip';
     BrowserModule,
     AppRoutingModule,
     ButtonModule,
-    DockModule,
-    RadioButton,
-    CommonModule,
-    FormsModule,
-    TooltipModule,
-    Dock
+    MenubarModule,
+    BadgeModule,
+    AvatarModule,
+    InputTextModule,
+    CommonModule
   ],
   providers: [
     provideAnimationsAsync(),
