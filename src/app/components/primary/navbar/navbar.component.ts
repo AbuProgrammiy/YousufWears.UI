@@ -1,7 +1,4 @@
-import { Component } from '@angular/core';
-import { MenuItem } from 'primeng/api';
-import { Menubar } from 'primeng/menubar';
-import { Ripple } from 'primeng/ripple';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 
 @Component({
@@ -11,39 +8,11 @@ import { Ripple } from 'primeng/ripple';
     standalone: false,
 })
 export class NavbarComponent {
-    items: MenuItem[] | undefined;
+    @Input() gender!: string
+    @Output() selectGender = new EventEmitter()
 
-    ngOnInit() {
-        this.items = [
-            {
-                label: 'Asosiy',
-                icon: 'pi pi-home',
-            },
-            {
-                label: 'Projects',
-                icon: 'pi pi-search',
-                badge: '3',
-                items: [
-                    {
-                        label: 'Core',
-                        icon: 'pi pi-bolt',
-                        shortcut: '⌘+S',
-                    },
-                    {
-                        label: 'Blocks',
-                        icon: 'pi pi-server',
-                        shortcut: '⌘+B',
-                    },
-                    {
-                        separator: true,
-                    },
-                    {
-                        label: 'UI Kit',
-                        icon: 'pi pi-pencil',
-                        shortcut: '⌘+U',
-                    },
-                ],
-            },
-        ];
+    genderSelection() {
+        localStorage.setItem("gender", this.gender)
+        this.selectGender.emit(this.gender)
     }
 }

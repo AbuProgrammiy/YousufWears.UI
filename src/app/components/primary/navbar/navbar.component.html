@@ -1,8 +1,8 @@
-<nav data-bs-theme="dark" class="navbar navbar-expand-lg bg-body-tertiary">
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
         <img class="nav-logo" src="../../../../assets/yousuf-wears-logo-white.png" alt="">
         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample"
-        aria-controls="offcanvasExample">
+            aria-controls="offcanvasExample">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -45,19 +45,10 @@
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body">
-        <div>
-            Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists,
-            etc.
-        </div>
-        <div class="dropdown mt-3">
-            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
-                Dropdown button
-            </button>
-            <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
-        </div>
+        <select (change)="genderSelection()" [(ngModel)]="gender" class="form-select"
+            aria-label="Default select example">
+            <option [selected]="gender=='male'" value="male">Erkaklar kiymi</option>
+            <option [selected]="gender=='female'" value="female">Ayyollar kiymi</option>
+        </select>
     </div>
 </div>

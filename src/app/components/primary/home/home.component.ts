@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
     selector: 'home',
@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
     standalone: false
 })
 export class HomeComponent {
-
+    @Input() gender !: string
 }

@@ -1,6 +1,6 @@
 <div class="main">
     @if(gender=="male" || gender=="female"){
-        <home/>
+        <home [gender]="gender"/>
     }
     @else {
         <gender-selection (selectGender)="selectGender($event)"/>
