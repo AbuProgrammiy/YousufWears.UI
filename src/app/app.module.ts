@@ -17,12 +17,12 @@ import Nora from '@primeng/themes/nora';
 // PrimeNG modules
 import { ButtonModule } from 'primeng/button';
 import { MenubarModule } from 'primeng/menubar';
-
 import { BadgeModule } from 'primeng/badge';
 import { AvatarModule } from 'primeng/avatar';
 import { InputTextModule } from 'primeng/inputtext';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { TreeSelectModule } from 'primeng/treeselect';
 
 @NgModule({
   declarations: [
@@ -41,13 +41,28 @@ import { FormsModule } from '@angular/forms';
     BadgeModule,
     AvatarModule,
     InputTextModule,
-    CommonModule
+    CommonModule,
+    TreeSelectModule
   ],
   providers: [
     provideAnimationsAsync(),
     providePrimeNG({
       theme: {
-        preset: Aura
+        preset: Aura,
+        options: {
+          prefix: 'p',
+          darkModeSelector: 'system',
+          cssLayer: false
+        }
+      },
+      ripple: true,
+      csp: {
+        nonce: '...'
+      },
+      translation: {
+        accept: 'Aceptar',
+        reject: 'Rechazar',
+        //translations
       }
     }),
   ],

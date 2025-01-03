@@ -10,9 +10,6 @@
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="#">Home</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
@@ -29,6 +26,13 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                </li>
+                <li class="nav-item">
+                    <select (change)="genderSelection()" [(ngModel)]="gender" class="form-select"
+                        aria-label="Default select example">
+                        <option [selected]="gender=='male'" value="male">Erkaklar kiymi</option>
+                        <option [selected]="gender=='female'" value="female">Ayyollar kiymi</option>
+                    </select>
                 </li>
             </ul>
             <form class="d-flex" role="search">
@@ -52,3 +56,12 @@
         </select>
     </div>
 </div>
+
+
+
+<p-treeSelect
+    class="category md:w-20rem w-full"
+    containerStyleClass="w-full"
+    placeholder="Kategoriya" 
+    [(ngModel)]="category" 
+    [options]="options" />
